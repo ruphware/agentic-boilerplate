@@ -42,19 +42,23 @@ rg -n "<PROJECT NAME>|YYYY-MM-DD|agentic-boilerplate" .
 
 ## Agent workflow (boot prompt)
 
-When starting a coding agent in a repo created from this template, use this boot sequence:
+Copy/paste this as the repo boot prompt:
 
-- Ingest `AGENTS.md` and assume the role.
-- Read `README.md`, `docs/INDEX.md`, `docs/specs/blueprint.md` to understand the project.
-- See the top of `docs/JOURNAL.md` for implementation process and details.
+```text
+Ingest AGENTS.md and assume the role.
+Read README.md docs/INDEX.md docs/specs/blueprint.md to understand the project.
+See top of docs/JOURNAL.md for implementation process and details.
+```
 
 ## INDEX refresh workflow
 
-When regenerating `docs/INDEX.md`:
+Copy/paste this when you want a fresh `docs/INDEX.md`:
 
-- Ingest `docs/prompts/PROMPT-INDEX.md` and execute it **verbatim**.
-- Use the correct tools to count LOC and fulfill all requirements.
-- Update diagrams and keep Mermaid syntax GitHub-compatible.
+```text
+We have new developments, and we need you to diligently create new index for our codebase:
+- Ingest @docs/prompts/PROMPT-INDEX.md and execute the prompt verbatim!
+- Use the correct tools to count the lines and fulfill all the requirements, including updating the diagrams and keeping the Mermaid syntax compatible with GitHub.
+```
 
 ## License
 
