@@ -16,4 +16,4 @@ Use: `docs/prompts/PROMPT-INDEX.md` as the instruction set for generating a full
 
 ## Status
 
-This INDEX is currently a starter stub.
+This INDEX is currently a starter stub for the template repo. Projects created from this template should regenerate their own `docs/INDEX.md` based on their actual codebase.

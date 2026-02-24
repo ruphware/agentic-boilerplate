@@ -21,10 +21,10 @@
 - [x] Add `docs/JOURNAL.md` starter
 - [x] Add `docs/specs/prd.md` and `docs/specs/blueprint.md` templates
 
-### 3) Make it usable in other repos
-- [ ] Add a short "How to adopt" section + checklist to README
-- [ ] Add a `templates/base/` directory mirroring the recommended baseline
-- [ ] Add `templates/typescript/` and `templates/python/` overlays (optional)
+### 3) Template repo polish (DX)
+- [x] Add GitHub template usage instructions to README
+- [ ] Add a simple “rename checklist” (things to update after templating)
+- [ ] Optional: add language overlays (TypeScript/Python) as **docs guidance**, not a bootstrap script
 
 ### 4) Governance
 - [ ] Decide license (MIT vs private)

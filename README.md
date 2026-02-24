@@ -10,16 +10,23 @@ This repo exists to make new projects immediately “agent-ready” by standardi
 - `docs/specs/*` — PRD/Blueprint/specs as the canonical contract
 - `docs/JOURNAL.md` — decision log
 
-## Quickstart (for a new project)
+## Quickstart (new project)
 
-1. Copy these files into the root of your new repo:
-   - `AGENTS.md`
-   - `TODO.md`
-   - `docs/` (everything)
+This repo is intended to be used as a **GitHub Template Repository**.
 
-2. Edit `README.md` and `docs/specs/` to reflect the project.
+### GitHub UI
+- Click **Use this template** → create a new repo.
 
-3. Generate/update `docs/INDEX.md` using `docs/prompts/PROMPT-INDEX.md`.
+### GitHub CLI
+```bash
+gh repo create <owner>/<new-repo> --template myelin-com/agentic-boilerplate --private
+# or --public
+```
+
+Then:
+1. Edit `README.md` and `docs/specs/*` to reflect the new project.
+2. Keep `AGENTS.md` as the operational contract for coding agents.
+3. Regenerate/update `docs/INDEX.md` using `docs/prompts/PROMPT-INDEX.md` whenever structure changes.
 
 ## Structure
 
