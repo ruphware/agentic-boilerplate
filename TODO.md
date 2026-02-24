@@ -1,43 +1,42 @@
 # TODO
 
-> Project: agentic-boilerplate — templates for agentic / CDD development.
+> Development plan
 
-## Goals
+Use this file as the current execution checklist. Keep it short and brutal.
 
-- Provide copy-paste templates that make a repo immediately **agent-ready**.
-- Keep templates language-agnostic by default.
-- Provide optional language overlays under `templates/<lang>/`.
+Guidance:
+- Specs live in `docs/specs/*` (PRD/Blueprint/definitions).
+- Repo context lives in `docs/INDEX.md`.
+- Decision log lives in `docs/JOURNAL.md`.
 
-## Tasks
+Archiving:
+- When this TODO gets long, move completed/old sections to `docs/archive/TODO_YYYY-MM-DD.md` and leave only the active plan here.
 
-### 1) Baseline template set
-- [x] Create root `AGENTS.md` (CDD rules)
-- [x] Create root `README.md`
-- [x] Create `docs/` layout
+---
 
-### 2) Documentation templates
-- [x] Add `docs/prompts/PROMPT-INDEX.md` (how to generate `docs/INDEX.md`)
-- [x] Add `docs/INDEX.md` starter
-- [x] Add `docs/JOURNAL.md` starter
-- [x] Add `docs/specs/prd.md` and `docs/specs/blueprint.md` templates
+## Phase 0 — Setup (day 0)
 
-### 3) Template repo polish (DX)
-- [x] Add GitHub template usage instructions to README
-- [ ] Add a simple “rename checklist” (things to update after templating)
-- [ ] Optional: add language overlays (TypeScript/Python) as **docs guidance**, not a bootstrap script
+- [ ] Fill in `docs/specs/prd.md`
+- [ ] Fill in `docs/specs/blueprint.md`
+- [ ] Update `AGENTS.md` with repo-specific constraints (if any)
+- [ ] Regenerate `docs/INDEX.md` using `docs/prompts/PROMPT-INDEX.md`
 
-### 4) Governance
-- [ ] Decide license (MIT vs private)
-- [ ] Decide whether to include CI templates (GitHub Actions)
-- [ ] Decide whether to include a standard `.gitignore` / `.editorconfig`
+## Phase 1 — MVP
 
-## Notes
+- [ ] Define MVP acceptance criteria (in PRD)
+- [ ] Implement core vertical slice
+- [ ] Add basic observability (logs + error taxonomy)
+- [ ] Add tests for the critical path
 
-- Keep content opinionated but not overly specific (no OrgPlot/DataGobbler-specific terms).
-- Templates should be compatible with the existing Myelin pattern:
-  - `AGENTS.md`
-  - `TODO.md`
-  - `docs/INDEX.md`
-  - `docs/prompts/PROMPT-INDEX.md`
-  - `docs/specs/*`
-  - `docs/JOURNAL.md`
+## Phase 2 — Hardening
+
+- [ ] Add lint/format/typecheck
+- [ ] Add CI pipeline (optional)
+- [ ] Add security baseline (secrets handling, least privilege, audits)
+- [ ] Add backup/rollback notes (runbook)
+
+## Phase 3 — Release
+
+- [ ] Versioning/release process
+- [ ] Deployment runbook
+- [ ] On-call / ops notes (if applicable)

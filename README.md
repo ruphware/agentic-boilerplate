@@ -1,14 +1,14 @@
 # agentic-boilerplate
 
-A reusable, opinionated template set for **agentic / CDD-style software development**.
+A reusable, opinionated template repo for **agentic / Chat‑Driven‑Development (CDD)** software engineering.
 
-This repo exists to make new projects immediately “agent-ready” by standardizing:
-- `AGENTS.md` — how coding agents should operate in this repo
+This template makes new repos immediately “agent-ready” by standardizing:
+- `AGENTS.md` — operating contract for coding agents (and humans)
 - `TODO.md` — execution plan / backlog
 - `docs/INDEX.md` — high-density architecture/context snapshot
 - `docs/prompts/PROMPT-INDEX.md` — how to regenerate `docs/INDEX.md`
 - `docs/specs/*` — PRD/Blueprint/specs as the canonical contract
-- `docs/JOURNAL.md` — decision log
+- `docs/JOURNAL.md` — high-signal implementation journal + ADR-style decisions
 
 ## Quickstart (new project)
 
@@ -23,10 +23,28 @@ gh repo create <owner>/<new-repo> --template myelin-com/agentic-boilerplate --pr
 # or --public
 ```
 
-Then:
-1. Edit `README.md` and `docs/specs/*` to reflect the new project.
-2. Keep `AGENTS.md` as the operational contract for coding agents.
-3. Regenerate/update `docs/INDEX.md` using `docs/prompts/PROMPT-INDEX.md` whenever structure changes.
+## RENAME CHECKLIST (DO THIS FIRST)
+
+Right after templating:
+
+1) **Update obvious identity strings**
+- `README.md` title + description
+- `docs/specs/prd.md` and `docs/specs/blueprint.md`: replace `<PROJECT NAME>` and `YYYY-MM-DD`
+- If the project has a product name separate from repo name: write both explicitly in README/PRD.
+
+2) **Search for placeholders / template strings**
+```bash
+rg -n "<PROJECT NAME>|YYYY-MM-DD|agentic-boilerplate" .
+```
+Fix every hit.
+
+3) **Regenerate repo context**
+- Update `docs/INDEX.md` to match the real codebase using `docs/prompts/PROMPT-INDEX.md`.
+
+4) **Decide tooling + guardrails early** (prevents churn)
+- language/runtime (Node/Python/Go/etc)
+- formatter/linter/typecheck/test runner
+- CI baseline (optional)
 
 ## Structure
 
@@ -39,5 +57,5 @@ Then:
 
 ## Notes
 
-- This repo contains **templates** (not a framework). It should stay language-agnostic.
-- If you want language-specific additions, add them under `templates/<lang>/...`.
+- This repo is **the template** (Option A). We intentionally avoid a second `templates/` copy to reduce confusion.
+- We intentionally do **not** include a bootstrap script for “install into existing repos” (too many edge cases). If you need that later, we can add it as a separate tool/repo.
