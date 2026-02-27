@@ -105,11 +105,6 @@ If you use Codex CLI and want explicit-only skills, install them from:
 
 This template is intentionally skill-free so it stays stable and tool-agnostic.
 
-## CI baseline
-
-This template includes a minimal PR hygiene workflow that only checks the contract files exist.
-Keep it, extend it, or delete it in derived repos.
-
 ## License
 
 MIT (see `LICENSE`). After templating, update the copyright holder/year.
