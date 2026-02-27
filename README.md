@@ -1,6 +1,8 @@
-# agentic-boilerplate
+# cdd-boilerplate
 
-A GitHub **template repository** for agentic / Chat‑Driven‑Development (CDD) workflows.
+Chat‑Driven Development (CDD): agentic development methodology + Codex skill pack.
+
+This is a GitHub **template repository** you can fork/template for new projects.
 
 ## What you get
 
@@ -20,7 +22,7 @@ This template standardizes the minimum set of files that make a repo easy to ope
 
 ### GitHub CLI
 ```bash
-gh repo create <owner>/<new-repo> --template ruphware/agentic-boilerplate --private
+gh repo create <owner>/<new-repo> --template ruphware/cdd-boilerplate --private
 # or --public
 ```
 
@@ -34,7 +36,7 @@ Right after templating:
 
 2) **Search for template placeholders**
 ```bash
-rg -n "<PROJECT NAME>|YYYY-MM-DD|agentic-boilerplate" .
+rg -n "<PROJECT NAME>|YYYY-MM-DD|cdd-boilerplate" .
 ```
 
 3) **Regenerate repo context**

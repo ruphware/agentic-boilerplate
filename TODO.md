@@ -14,7 +14,7 @@ Archiving:
 
 ---
 
-## Step template
+## Template — Step
 
 Copy this block per step:
 

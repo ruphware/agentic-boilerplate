@@ -1,4 +1,4 @@
-# Context for `agentic-boilerplate`
+# Context for `cdd-boilerplate`
 
 ## Executive Summary
 This repository provides templates and conventions for agentic / Chat-Driven-Development (CDD) projects, including standardized `AGENTS.md`, a task-oriented `TODO.md`, and a documentation system (`docs/INDEX.md`, specs, and journals) that makes repos easy for both humans and coding agents to understand and change.
