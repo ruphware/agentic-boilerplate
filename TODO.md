@@ -12,13 +12,20 @@ Rules:
 Archiving:
 - When the file becomes long/noisy, move completed sections to `docs/archive/TODO_YYYY-MM-DD.md`.
 
+Multi-TODO (optional):
+- Keep this file as the root plan.
+- If you add sub-TODOs, add an **Active Work Index** section in this file linking to them.
+- Optional additional TODOs are allowed: `TODO-<area>.md` (one step lives in exactly one TODO file).
+
 ---
 
 ## Template — Step
 
-Copy this block per step:
+Copy this block per step.
 
-```
+Required headings: Goal / Deliverable / Changes / Automated checks / UAT.
+
+```md
 ## Step <NN> — <title>
 
 Goal:
@@ -27,11 +34,26 @@ Goal:
 Deliverable:
 - …
 
+Confirm (optional):
+- Acceptance rules / behavior constraints to lock before implementation.
+
+Plan (optional):
+- File plan: `filename | purpose | ≈LOC`
+- Logging plan: 3–7 grep-friendly logs at key state changes / I/O.
+- Risks: top likely failure modes.
+
+Implementation tasks (optional):
+- [ ] …
+
+Tests (optional):
+- Unit:
+- Integration:
+
 Changes:
 - Files to add/edit: …
 
 Automated checks:
-- … (commands)
+- … (exact commands)
 
 UAT:
 - … (manual checklist)
@@ -53,27 +75,17 @@ Changes:
 - Generate/update: `docs/INDEX.md`
 
 Automated checks:
-- (add project-specific commands here once tooling exists)
+- test -f docs/specs/prd.md && test -f docs/specs/blueprint.md
+- test -f docs/INDEX.md
+- ! grep -REIn "<PROJECT NAME>|YYYY-MM-DD" docs/specs/*.md
 
 UAT:
 - Open `docs/INDEX.md` and confirm diagrams render on GitHub.
 - Confirm the file inventory matches the repo tree.
 
-## Step 01 — first vertical slice (MVP)
+## Next: create Step 01 (project-specific)
 
-Goal:
-- Implement the smallest end-to-end slice that proves the architecture.
-
-Deliverable:
-- A running path that exercises core inputs → logic → outputs.
-
-Changes:
-- Add/edit: (project-specific)
-
-Automated checks:
-- (commands)
-
-UAT:
-- (manual checklist)
+After Step 00 is done, add your own Step 01 using the template above.
+Do not proceed without filling **Automated checks** (exact commands) and **UAT** (manual checklist).
 
 ---

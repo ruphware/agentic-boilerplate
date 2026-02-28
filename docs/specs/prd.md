@@ -24,10 +24,19 @@ What pain exists today? Who feels it? What do they do instead?
 
 - Persona A — ...
 
-## Key Use Cases
+## User journeys
+
+Write 2–5 journeys in plain language (happy path + key edge cases).
 
 1) ...
 2) ...
+
+## Acceptance criteria
+
+Make these testable. If a criterion can’t be tested, it isn’t a criterion.
+
+- AC1 — ...
+- AC2 — ...
 
 ## Functional Requirements
 
