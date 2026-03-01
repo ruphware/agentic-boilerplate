@@ -149,4 +149,8 @@ If you want an optional, separate skills repo, see:
 
 ## License
 
-MIT (see `LICENSE`). After templating, update the copyright holder/year.
+Free-to-use-adjust-just-don't-blame-me-for-anything-licence.
+
+Note: this README.md is part of the template; update it for your project when you use this template.
+
+After templating, update the copyright holder/year.
