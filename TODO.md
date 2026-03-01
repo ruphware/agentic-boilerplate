@@ -1,29 +1,33 @@
 # TODO
 
-This file is the active execution plan.
+> Active execution plan (steps). Gate completion on Automated checks + UAT.
 
-Rules:
-- Write work as **steps**.
-- Every step must include:
-  - **Automated checks** (exact commands: lint/typecheck/tests/build)
-  - **UAT** (manual acceptance checklist)
-- Keep it current; archive aggressively.
-
-Archiving:
-- When the file becomes long/noisy, move completed sections to `docs/archive/TODO_YYYY-MM-DD.md`.
-
-Multi-TODO (optional):
-- Keep this file as the root plan.
-- If you add sub-TODOs, add an **Active Work Index** section in this file linking to them.
-- Optional additional TODOs are allowed: `TODO-<area>.md` (one step lives in exactly one TODO file).
+Reference: `docs/specs/prd.md` and `docs/specs/blueprint.md`.
+Archive: move completed steps to `docs/archive/TODO_YYYY-MM-DD.md` when noisy.
+Note: Regenerate `docs/INDEX.md` once there’s code/structure worth snapshotting (use `docs/prompts/PROMPT-INDEX.md`).
 
 ---
 
-## Template — Step
+## Step 00 — project setup
 
-Copy this block per step.
+Goal:
+- Establish the project contract (PRD + Blueprint) and a project-specific README.
 
-Required headings: Goal / Deliverable / Changes / Automated checks / UAT.
+Tasks:
+- [ ] Fill in `docs/specs/prd.md` (replace `<PROJECT NAME>` / `YYYY-MM-DD`; add goals + acceptance criteria).
+- [ ] Fill in `docs/specs/blueprint.md` (replace placeholders; add architecture + runbook).
+- [ ] Update `README.md` using newly created `docs/specs/prd.md` and `docs/specs/blueprint.md`.
+
+Automated checks:
+- test -f docs/specs/prd.md && test -f docs/specs/blueprint.md && test -f README.md
+- ! grep -REIn "<PROJECT NAME>|YYYY-MM-DD" docs/specs/*.md README.md
+
+UAT:
+- [ ] Confirm no placeholders remain.
+
+---
+
+## Step template (copy/paste)
 
 ```md
 ## Step <NN> — <title>
@@ -31,61 +35,12 @@ Required headings: Goal / Deliverable / Changes / Automated checks / UAT.
 Goal:
 - …
 
-Deliverable:
-- …
-
-Confirm (optional):
-- Acceptance rules / behavior constraints to lock before implementation.
-
-Plan (optional):
-- File plan: `filename | purpose | ≈LOC`
-- Logging plan: 3–7 grep-friendly logs at key state changes / I/O.
-- Risks: top likely failure modes.
-
-Implementation tasks (optional):
+Tasks:
 - [ ] …
 
-Tests (optional):
-- Unit:
-- Integration:
-
-Changes:
-- Files to add/edit: …
-
 Automated checks:
-- … (exact commands)
+- …
 
 UAT:
-- … (manual checklist)
+- [ ] …
 ```
-
----
-
-## Step 00 — project setup
-
-Goal:
-- Establish the project contract and repo context.
-
-Deliverable:
-- Filled-in PRD + Blueprint and a generated INDEX.
-
-Changes:
-- Edit: `docs/specs/prd.md`
-- Edit: `docs/specs/blueprint.md`
-- Generate/update: `docs/INDEX.md`
-
-Automated checks:
-- test -f docs/specs/prd.md && test -f docs/specs/blueprint.md
-- test -f docs/INDEX.md
-- ! grep -REIn "<PROJECT NAME>|YYYY-MM-DD" docs/specs/*.md
-
-UAT:
-- Open `docs/INDEX.md` and confirm diagrams render on GitHub.
-- Confirm the file inventory matches the repo tree.
-
-## Next: create Step 01 (project-specific)
-
-After Step 00 is done, add your own Step 01 using the template above.
-Do not proceed without filling **Automated checks** (exact commands) and **UAT** (manual checklist).
-
----
