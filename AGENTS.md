@@ -73,7 +73,7 @@ EXECUTION:
 - Validation plan (exact commands)
 
 NEXT:
-- Suggest one-liner commit message (past tense, lower case, no prefix)
+- If codebase was changed suggest commit message (one-liner, past tense, lower case, no prefix)
 - Immediate next step if continuation needed
 
 
