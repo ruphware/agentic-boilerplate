@@ -1,4 +1,6 @@
-CDD-Boilerplate is a tiny, documentation-first **template contract** for building with coding agents - KISS, but with consistently high-quality outcomes.
+# CDD Boilerplate
+
+CDD Boilerplate is a tiny, documentation-first **template contract** for building with coding agents - KISS, but with consistently high-quality outcomes.
 
 **Core values**
 - **Resumable**: any agent can pick up from TODO + INDEX + JOURNAL
